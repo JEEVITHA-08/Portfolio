@@ -1,0 +1,77 @@
+.journey__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.journey__card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--accent-blue-dim);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: border-color var(--transition-base), background var(--transition-base), transform var(--transition-base);
+}
+.journey__card:hover {
+  border-left-color: var(--accent-blue);
+  background: var(--surface-2);
+  transform: translateY(-3px);
+}
+
+.journey__card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.journey__card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: var(--surface-2);
+  color: var(--accent-violet);
+  flex-shrink: 0;
+}
+
+.journey__card-title {
+  font-size: 16.5px;
+}
+
+.journey__card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.journey__card-list li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.journey__card-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-violet);
+}
+
+@media (max-width: 900px) {
+  .journey__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .journey__grid {
+    grid-template-columns: 1fr;
+  }
+}

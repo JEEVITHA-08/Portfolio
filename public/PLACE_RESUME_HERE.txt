@@ -1,0 +1,6 @@
+Place your resume file here as: Boopathi-Resume.pdf
+
+The full path must be: public/Boopathi-Resume.pdf
+
+Once added, delete this text file. The Resume buttons in the Navbar,
+Hero, and Contact sections already point to /Boopathi-Resume.pdf.

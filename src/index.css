@@ -1,0 +1,197 @@
+:root {
+  /* Backgrounds */
+  --bg: #090b10;
+  --bg-elevated: #0d1017;
+  --surface: #10141d;
+  --surface-2: #151a25;
+  --surface-hover: #1a202c;
+
+  /* Text */
+  --text-primary: #e8ebf1;
+  --text-secondary: #9aa3b8;
+  --text-muted: #626b80;
+
+  /* Accents */
+  --accent-blue: #4c8dff;
+  --accent-blue-dim: #2c5ba8;
+  --accent-violet: #9b7bff;
+  --accent-gradient: linear-gradient(120deg, var(--accent-blue), var(--accent-violet));
+
+  /* Status */
+  --success: #34d399;
+  --error: #f87171;
+  --warning: #fbbf24;
+
+  /* Borders */
+  --border: rgba(230, 235, 245, 0.08);
+  --border-strong: rgba(230, 235, 245, 0.16);
+  --border-accent: rgba(76, 141, 255, 0.35);
+
+  /* Layout */
+  --container-width: 1200px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --section-padding: 128px;
+  --section-padding-mobile: 72px;
+
+  /* Motion */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#root {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input, textarea {
+  font-family: inherit;
+  color: inherit;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Visible keyboard focus states across the site */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+::selection {
+  background: var(--accent-blue-dim);
+  color: var(--text-primary);
+}
+
+/* Shared layout utilities used across section components */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.section {
+  padding: var(--section-padding) 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--section-padding-mobile) 0;
+  }
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Subtle engineering grid background, reused by Hero and other sections */
+.grid-backdrop {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(230, 235, 245, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(230, 235, 245, 0.035) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 20%, black 40%, transparent 100%);
+  pointer-events: none;
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.35;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-2);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}
