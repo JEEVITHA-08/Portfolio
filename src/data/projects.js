@@ -3,7 +3,7 @@
 export const projects = [
   {
     id: 'social-media-platform',
-    title: 'Full-Stack Social Media Platform',
+    title: 'Twitter Clone Application ',
     status: 'Completed / Actively Improving',
     statusTone: 'complete',
     description:
@@ -49,7 +49,7 @@ export const projects = [
     ],
     // Replace with your real repository and live demo URLs before deploying.
     githubUrl: 'https://github.com/your-github-username/social-media-platform',
-    liveUrl: null,
+    liveUrl: https://twitter-clone-frontend-iota-ten.vercel.app,
   },
   {
     id: 'placement-preparation-platform',
