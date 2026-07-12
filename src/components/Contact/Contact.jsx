@@ -106,7 +106,7 @@ export default function Contact() {
               </span>
               <div>
                 <span className="contact__info-label">LinkedIn</span>
-                <span className="contact__info-value">Connect with me</span>
+                <span className="contact__info-value">{profile.linkedin.username}</span>
               </div>
             </a>
             <a

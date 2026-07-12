@@ -5,7 +5,7 @@
 export const profile = {
   name: 'Boopathi',
   fullName: 'Boopathi',
-  initial: '',
+  initial: 'S.',
   role: 'Java Full-Stack Developer',
   secondaryPositioning: 'Backend-Focused Developer | Spring Boot Developer | Problem Solver',
   tagline: 'Building secure backends and practical full-stack applications.',
@@ -33,19 +33,19 @@ export const profile = {
   ],
 
   // Contact / identity — REPLACE THESE PLACEHOLDERS with your real values.
-  email: 'your.email@example.com',
+  email: 'tyson275835@gmail.com',
   location: 'India',
 
   // Social + external links — single source of truth.
   // These are placeholder tokens, not real accounts. Replace before deploying.
   github: {
-    username: 'your-github-username',
-    url: 'https://github.com/your-github-username',
+    username: 'Boopathi2025',
+    url: 'https://github.com/Boopathi2025',
   },
   linkedin: {
-    url: 'https://www.linkedin.com/in/your-linkedin-username',
+    url: 'https://www.linkedin.com/in/boopathi-s-1b57a127a',
   },
-  portfolioUrl: 'https://your-portfolio-domain.com',
+  portfolioUrl: 'portfolioboopathi-one.vercel.app',
 
   // Resume must be placed at public/Boopathi-Resume.pdf
   resumePath: '/Boopathi-Resume.pdf',
